@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem id="stylerent_menu_root" name="Style Rent Car" sequence="10"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="stylerent_datamaster_menu_categ" 
+            name="Operasional" 
+            parent="stylerent_menu_root" 
+            sequence="20"/>
+
+        <menuitem id="stylerent_contact_menu_categ" 
+            name="Data Contact" 
+            parent="stylerent_menu_root" 
+            sequence="30"/> 
+
+    </data>
+</odoo>

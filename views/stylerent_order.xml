@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- stylerent.ordermobil tree view -->
+        <record id="stylerent_ordermobil_view_tree" model="ir.ui.view">
+            <field name="name">stylerent.ordermobil.view.tree</field>
+            <field name="model">stylerent.ordermobil</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->                    
+                    <field name="pemesan_id"/>
+                    <field name="tanggal_pesan"/>
+                </tree>
+            </field>
+        </record>
+        <!-- stylerent.ordermobil form view -->
+        <record id="stylerent_ordermobil_view_form" model="ir.ui.view">
+            <field name="name">stylerent.ordermobil.view.form</field>
+            <field name="model">stylerent.ordermobil</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="pemesan_id" />
+                        </group>
+                        <group>
+                            <field name="tanggal_pesan" />
+                        </group>
+                        <notebook colspan ='4'>
+                            <page name="jenis mobil" string="Detail Pesanan">
+                            <field name="detailjenis_ids">
+                                <tree editable='bottom'>
+                                    <field name="jenissewa_id" />
+                                    <field name="harga"/>
+                                    <field name="lamasewa" />
+                                    <field name="jumlahnya" sum="Total Tagihan" />
+                                </tree>
+                            </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- stylerent.ordermobil action window -->
+        <record id="stylerent_ordermobil_action" model="ir.actions.act_window">
+            <field name="name">Orderan Style Rent Car</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stylerent.ordermobil</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="stylerent_ordermobil_menu_act" 
+            name="Order Mobil" 
+            parent="stylerent_menu_root" 
+            action="stylerent_ordermobil_action" 
+            sequence="5"/>
+    </data>
+</odoo>
