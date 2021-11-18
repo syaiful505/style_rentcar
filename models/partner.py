@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class Partner(models.Model):
     _inherit = 'res.partner'
@@ -15,4 +16,9 @@ class Partner(models.Model):
         string='Sudah menikah',
         default=False
     )
-    
+    @api.constrains('name')
+    def _check_name(self):
+        for record in self :
+            same = self.env['res.partner'].search([('name', '=',record.name), ('id', '!=',record.id)])
+            if same:
+                raise ValidationError("Nama %s sudah ada" % record.name)    

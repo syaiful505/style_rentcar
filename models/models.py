@@ -1,5 +1,4 @@
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError
 
 class ModelDasar(models.Model):
     _name = "stylerent.modeldasar"
