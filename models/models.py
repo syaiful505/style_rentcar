@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class ModelDasar(models.Model):
     _name = "stylerent.modeldasar"
@@ -36,3 +37,19 @@ class stylerent(models.Model):
         delegate=True
     )
     
+    @api.onchange('tipe')
+    def _onchange_tipe(self):
+        if self.tipe == 'mpv':
+            return {
+                'warning' : {
+                    'title' : "Teknik Pemeliharaan",
+                    'message' : "Rubah teknik pemeliharaan ke istimewa"
+                },
+            }
+        elif self.tipe == 'suv':
+            return {
+                'warning' : {
+                    'title' : "Teknik Pemeliharaan",
+                    'message' : "Rubah teknik pemeliharaan ke super"
+                }
+            }
