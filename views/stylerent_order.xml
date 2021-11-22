@@ -10,6 +10,7 @@
                     <!-- Add your fields here -->                    
                     <field name="pemesan_id"/>
                     <field name="tanggal_pesan"/>
+                    <field name="jml_order"/>
                 </tree>
             </field>
         </record>
@@ -25,6 +26,7 @@
                         </group>
                         <group>
                             <field name="tanggal_pesan" />
+                            <field name="jml_order"/>
                         </group>
                         <notebook colspan ='4'>
                             <page name="jenis mobil" string="Detail Pesanan">

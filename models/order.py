@@ -20,6 +20,13 @@ class OrderMobil(models.Model):
         string='Detail Pesanan'
     )
 
+    jml_order = fields.Integer(compute='_compute_jml_order', string='Total Order')
+    
+    @api.depends('detailjenis_ids')
+    def _compute_jml_order(self):
+        for record in self:
+            record.jml_order += len(record.detailjenis_ids)
+
 class DetailOrder(models.Model):
     _name = 'stylerent.detailorder'
     _description = 'Detail Orderan Customer'
