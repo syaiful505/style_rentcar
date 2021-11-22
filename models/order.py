@@ -27,6 +27,14 @@ class OrderMobil(models.Model):
         for record in self:
             record.jml_order += len(record.detailjenis_ids)
 
+    total_order = fields.Integer(compute='_compute_total_order', string='Total yang harus dibayar')
+    
+    @api.model
+    def _compute_total_order(self):
+        for record in self:
+            total = sum(self.env['stylerent.detailorder'].search([]).mapped('jumlahnya'))
+            record.total_order = total
+
 class DetailOrder(models.Model):
     _name = 'stylerent.detailorder'
     _description = 'Detail Orderan Customer'

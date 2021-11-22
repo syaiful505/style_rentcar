@@ -11,6 +11,7 @@
                     <field name="pemesan_id"/>
                     <field name="tanggal_pesan"/>
                     <field name="jml_order"/>
+                    <field name="total_order"/>
                 </tree>
             </field>
         </record>
@@ -23,10 +24,11 @@
                     <sheet>
                         <group>
                             <field name="pemesan_id" />
+                            <field name="tanggal_pesan" />
                         </group>
                         <group>
-                            <field name="tanggal_pesan" />
                             <field name="jml_order"/>
+                            <field name="total_order"/>
                         </group>
                         <notebook colspan ='4'>
                             <page name="jenis mobil" string="Detail Pesanan">
