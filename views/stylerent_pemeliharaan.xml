@@ -75,7 +75,5 @@
     parent="stylerent_datamaster_menu_categ" 
     action="stylerent_service_action" 
     sequence="10"/>
-    
-  
   </data>
 </odoo>

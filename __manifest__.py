@@ -21,6 +21,7 @@
         'views/stylerent_pemeliharaan.xml',
         'views/stylerent_pegawai.xml',
         'views/stylerent_customer.xml',
-        'views/stylerent_order.xml'
+        'views/stylerent_order.xml',
+        'views/stylerent_pembelian.xml'
     ],
 }

@@ -32,7 +32,7 @@ class OrderMobil(models.Model):
     @api.model
     def _compute_total_order(self):
         for record in self:
-            total = sum(self.env['stylerent.detailorder'].search([]).mapped('jumlahnya'))
+            total = sum(self.env['stylerent.detailorder'].search([('order_id','=', record.id)]).mapped('jumlahnya'))
             record.total_order = total
 
 class DetailOrder(models.Model):
