@@ -36,7 +36,7 @@
         </record>
         <!-- stylerent.maintenance action window -->
         <record id="stylerent_maintenance_action" model="ir.actions.act_window">
-            <field name="name">stylerent.maintenance.action</field>
+            <field name="name">Alat dan Bahan maintenance</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">stylerent.maintenance</field>
             <field name="view_mode">tree,form</field>
@@ -50,8 +50,9 @@
         </record>
         <menuitem
             id="stylerent_maintenance_menu"
+            action="stylerent_maintenance_action"
             name="Alat dan Bahan"
             parent="stylerent_pembelian_menu_categ"
-            sequence="13"/>
+            sequence="15"/>
     </data>
 </odoo>
