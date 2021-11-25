@@ -4,7 +4,7 @@
     'summary': 'Style rentcar management software',
     'description': """Style rentcar management software""",
     'author': "My Company",
-    'website': "http://srikandiart.com",
+    'website': "",
     
     'category': 'Productivity',
     'version': '0.1',
@@ -22,6 +22,7 @@
         'views/stylerent_pegawai.xml',
         'views/stylerent_customer.xml',
         'views/stylerent_order.xml',
-        'views/stylerent_pembelian.xml'
+        'views/stylerent_pembelian.xml',
+        'views/stylerent_maintenance.xml'
     ],
 }

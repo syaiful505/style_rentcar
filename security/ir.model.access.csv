@@ -4,3 +4,4 @@ access_stylerent_service,access.stylerent.service,model_stylerent_service,,1,1,1
 access_stylerent_ordermobil,access.stylerent.ordermobil,model_stylerent_ordermobil,,1,1,1,1
 access_stylerent_detailorder,access.stylerent.detailorder,model_stylerent_detailorder,,1,1,1,1
 access_stylerent_suplier,access.stylerent.suplier,model_stylerent_suplier,,1,1,1,1
+access_stylerent_maintenance,access.stylerent.maintenance,model_stylerent_maintenance,,1,1,1,1
